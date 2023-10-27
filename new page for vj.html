@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1483232539664-d89822fb5d3e?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG8lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #container h1 {
+            color: #333;
+        }
+
+        #container input[type="text"],
+        #container input[type="password"],
+        #container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #container input[type="submit"] {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #container input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        #container .error {
+            color: red;
+        }
+
+        #container #showPassword {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Register Page</h1>
+        <form action="registration_process.php" method="post">
+             <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <br>
+            <p class="error" id="passwordError"></p>
+            <input type="checkbox" id="showPassword"> Show Password
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
